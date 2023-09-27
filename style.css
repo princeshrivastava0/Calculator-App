@@ -1,0 +1,190 @@
+/* Global CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: url("./background.jpg") no-repeat center;
+  background-size: cover;
+}
+
+/* Parent Container */
+.container {
+  border-radius: 5%;
+  width: 25%;
+  height: 75%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(128, 128, 128, 0.479);
+  padding: 1%;
+}
+
+/* Input Display Container */
+.display {
+  width: 100%;
+  text-align: center;
+  height: 12%;
+  margin: 10% 0 5% 0;
+}
+
+/* Input Display Element */
+#display {
+  width: 90%;
+  height: 100%;
+  border-radius: 15px;
+  font-size: 1.5rem;
+  font-weight: bolder;
+  padding: 2.5%;
+  background-color: antiquewhite;
+  text-align: right;
+  overflow: scroll;
+  scroll-behavior: smooth;
+}
+
+#display::placeholder {
+  text-align: center;
+}
+
+/* Buttons Container */
+.buttons {
+  width: 100%;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Button Rows */
+.row {
+  width: 90%;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Button Elements */
+.row > button {
+  width: 25%;
+  height: 75%;
+  border-radius: 50px;
+  margin: 0 1%;
+  background-color: rgb(54, 54, 54);
+  color: white;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 1.25rem;
+  font-weight: 900;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.row > button:active {
+  transform: translateY(4px);
+}
+
+/* Operations Buttons */
+.operations > button,
+.row > button:nth-child(4),
+.operations-2 > button:nth-child(3) {
+  background-color: rgb(255, 115, 0);
+  font-size: 2rem;
+}
+
+.operations > button:nth-child(1){
+  width: 75%;
+  font-size: 1.5rem;
+}
+
+.operations-2 > button:nth-child(3) {
+  width: 50%;
+  font-size: 1.5rem;
+}
+
+.operations > button:nth-child(2),
+.operations > button:nth-child(3),
+.operations-2 > button:nth-child(1),
+.operations-2 > button:nth-child(2) {
+  width: 25%;
+  font-size: 1.5rem;
+}
+
+/* Footer */
+footer {
+  width: 100%;
+  height: 15%;
+  text-align: center;
+  margin-top: 1%;
+}
+
+footer > h2 {
+  color: white;
+  margin-bottom: 1%;
+}
+
+/* Mobile Social Media Icons */
+.mobile-socials {
+  display: none;
+}
+
+/* Verical Mobile Display CSS*/
+@media screen and (max-width: 600px) {
+  /* Parent Container */
+  .container {
+    width: 100%;
+  }
+
+  /* Large Social Media Icons */
+  .socials-large {
+    display: none;
+  }
+
+  /* Mobile Social Media Icons */
+  .mobile-socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .mobile-socials > a {
+    margin: 0 2.5%;
+  }
+
+  /* Footer */
+  footer {
+    margin-top: 5%;
+  }
+}
+
+/* Horizontal Mobile Display CSS*/
+@media screen and (max-width: 1000px) and (min-width: 601px) {
+  .container {
+    width: 50%;
+  }
+
+  /* Large Social Media Icons */
+  .socials-large {
+    display: block;
+  }
+
+  /* Mobile Social Media Icons */
+  .mobile-socials {
+    display: none;
+  }
+
+  .operations > button,
+  .operations-2 > button,
+  .row > button:nth-child(4) {    
+    font-size: 1rem;
+  }
+}
