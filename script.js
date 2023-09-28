@@ -2,6 +2,7 @@ const input = document.getElementById("display"); //Display
 const digitsBtn = document.querySelectorAll(".btn"); //Number Buttons
 const submitBtn = document.querySelector(".submit"); //Submit Button
 const resetBtn = document.querySelector(".reset"); //Reset Button
+const delBtn = document.getElementById("delete");
 const decimalBtn = document.getElementById("decimal"); //Decimal Button
 
 // Maths Operations Buttons
@@ -94,6 +95,14 @@ const calculate = () => {
 };
 
 submitBtn.addEventListener("click", calculate);
+
+// Delete Button Function to erase the display value
+const del = () => {
+  input.value = input.value.slice(0, -1);
+  return input.value; 
+}
+
+delBtn.addEventListener("click", del);
 
 // Reset Function to empty the display value
 const reset = () => {

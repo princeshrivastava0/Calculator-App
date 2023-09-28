@@ -101,11 +101,8 @@ body {
   font-size: 2rem;
 }
 
-.operations > button:nth-child(1){
-  width: 75%;
-  font-size: 1.5rem;
-}
 
+.operations > button:nth-child(1),
 .operations-2 > button:nth-child(3) {
   width: 50%;
   font-size: 1.5rem;
